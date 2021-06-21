@@ -13,6 +13,12 @@ ask
 
 while [[ $response -ne $(ls -1 | wc -l) ]]
 do
+  if [[ $response -gt $(ls -1 | wc -l) ]]
+  then
+    echo "Too high"
+  else
+    echo "Too low"
+  fi
   echo "Wrong Answer!"
   echo "Try again."
   ask
