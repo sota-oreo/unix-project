@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# File: test.sh
+# File: guessinggame.sh
 
 function ask {
   echo "How many files are in the current directory?"
