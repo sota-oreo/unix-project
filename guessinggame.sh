@@ -11,9 +11,9 @@ function ask {
 echo "Let's start a quiz!"
 ask
 
-while [[ $response -ne $(ls -1 | wc -l) ]]
+while [[ $response -ne $(ls -1F | grep -v / | wc -l) ]]
 do
-  if [[ $response -gt $(ls -1 | wc -l) ]]
+  if [[ $response -gt $(ls -1F | grep -v / | wc -l) ]]
   then
     echo "Too high"
   else
